@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  myserver-product:
+    build: .
+    user: "node"
+    working_dir: /home/node/app
+    ports:
+      - '5001:5001'
+    environment:
+      - PORT=5001
+      - DATABASE_URL='mongodb://mydatabase:27017'
+    volumes:
+      - ./:/home/node/app
+    command: "npm start"
+
+  mydatabase:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+
+  

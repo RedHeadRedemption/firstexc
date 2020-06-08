@@ -1,0 +1,18 @@
+{
+  "name": "first-docker-app",
+  "version": "0.1.0",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.18"
+  },
+  "main": "myServer.js",
+  "scripts": {
+    "start": "node myServer.js"
+  },
+  "engines": {
+    "node": "4.4.5"
+  }
+}
